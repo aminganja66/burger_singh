@@ -14,7 +14,12 @@ class SplashView extends GetView<SplashController> {
       backgroundColor: AppColors.yellow,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Center(child: Image.asset(AppImages.logo))],
+        children: [
+          Hero(
+            tag: "logo",
+            child: Center(child: Image.asset(AppImages.logo)),
+          ),
+        ],
       ),
     );
   }
