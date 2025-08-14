@@ -1,6 +1,7 @@
 import 'package:burger_singh/app/core/app_colors.dart';
 import 'package:burger_singh/app/core/app_images.dart';
 import 'package:burger_singh/app/modules/home/views/home_category_view.dart';
+import 'package:burger_singh/app/modules/home/views/home_our_location_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -13,7 +14,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      body: SingleChildScrollView(child: Column(children: [HomeCategoryView()])),
+      body: SingleChildScrollView(child: Column(children: [HomeCategoryView(), HomeOurLocationView()])),
     );
   }
 

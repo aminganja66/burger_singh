@@ -25,4 +25,6 @@ class HomeController extends GetxController {
       color: 0XFF6BCB77, // Fresh green
     ),
   ];
+
+  List<String> ourLocations = ["Ahmedabad", "Surat", "Mumbai", "Delhi"];
 }
