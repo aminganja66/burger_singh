@@ -1,29 +1,36 @@
+import 'package:burger_singh/app/core/app_colors.dart';
+import 'package:burger_singh/app/core/app_images.dart';
 import 'package:burger_singh/app/data/models/home_category_model.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  List<HomeCategoryModel> homeCategories = [
-    HomeCategoryModel(
+  List<HomeCommonDataWidget> homeCategories = [
+    HomeCommonDataWidget(
       image: 'assets/images/burger.png',
       title: 'Burger',
-      color: 0XFFFFB84C, // Warm yellow-orange
+      color: AppColors.yellow.withValues(alpha: 0.5), // Warm yellow-orange
     ),
-    HomeCategoryModel(
+    HomeCommonDataWidget(
       image: 'assets/images/fries.png',
       title: 'Fries',
-      color: 0XFFFFD93D, // Bright golden yellow
+      color: AppColors.yellow.withValues(alpha: 0.5), // Warm yellow-orange
     ),
-    HomeCategoryModel(
+    HomeCommonDataWidget(
       image: 'assets/images/momo.png',
       title: 'Momos',
-      color: 0XFFFF9B9B, // Soft pink-red
+      color: AppColors.yellow.withValues(alpha: 0.5), // Warm yellow-orange
     ),
 
-    HomeCategoryModel(
+    HomeCommonDataWidget(
       image: 'assets/images/drinks.png',
       title: 'Drinks',
-      color: 0XFF6BCB77, // Fresh green
+      color: AppColors.yellow.withValues(alpha: 0.5), // Warm yellow-orange
     ),
+  ];
+
+  List<HomeCommonDataWidget> homeRecommendedItem = [
+    HomeCommonDataWidget(image: AppImages.burger, title: 'Udta Punjab 2.0', price: 199),
+    HomeCommonDataWidget(image: AppImages.mojito, title: 'Gulaabo', price: 49),
   ];
 
   List<String> ourLocations = ["Ahmedabad", "Surat", "Mumbai", "Delhi"];

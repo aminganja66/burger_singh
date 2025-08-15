@@ -1,7 +1,10 @@
-class HomeCategoryModel {
+import 'dart:ui';
+
+class HomeCommonDataWidget {
   final String? image;
   final String title;
-  final int color;
+  final int? price;
+  final Color? color;
 
-  HomeCategoryModel({this.image, required this.title, required this.color});
+  HomeCommonDataWidget({this.image, required this.title, this.color, this.price});
 }

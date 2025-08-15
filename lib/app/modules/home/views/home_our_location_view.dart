@@ -13,7 +13,6 @@ class HomeOurLocationView extends GetView<HomeController> {
       spacing: 10,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 20),
         Padding(
           padding: const EdgeInsets.only(left: 20),
           child: Text(

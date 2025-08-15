@@ -1,20 +1,37 @@
 import 'package:burger_singh/app/core/app_colors.dart';
 import 'package:burger_singh/app/core/app_images.dart';
 import 'package:burger_singh/app/modules/home/views/home_category_view.dart';
+import 'package:burger_singh/app/modules/home/views/home_featured_item_view.dart';
 import 'package:burger_singh/app/modules/home/views/home_our_location_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
+import 'home_banner_view.dart';
+import 'home_our_best_seller_view.dart';
+import 'home_recommended_item_view.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       appBar: _appBar(),
-      body: SingleChildScrollView(child: Column(children: [HomeCategoryView(), HomeOurLocationView()])),
+      body: SingleChildScrollView(
+        child: Column(
+          spacing: 20,
+          children: [
+            HomeBannerView(),
+            HomeCategoryView(),
+            HomeOurBestSellerView(),
+            HomeFeaturedItemView(),
+            HomeRecommendedItemView(),
+            HomeOurLocationView(),
+          ],
+        ),
+      ),
     );
   }
 
@@ -44,19 +61,7 @@ class HomeView extends GetView<HomeController> {
           ),
         ],
       ),
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: Container(
-            height: 40,
-            width: 40,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: Colors.redAccent),
-            child: Center(
-              child: Image.asset(AppImages.notificationBell, height: 22, width: 22, color: AppColors.white),
-            ),
-          ),
-        ),
-      ],
+
       backgroundColor: AppColors.red,
     );
   }
