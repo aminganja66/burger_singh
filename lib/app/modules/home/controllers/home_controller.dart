@@ -6,23 +6,23 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   List<HomeCommonDataWidget> homeCategories = [
     HomeCommonDataWidget(
-      image: 'assets/images/burger.png',
+      image: AppImages.burgerCat,
       title: 'Burger',
       color: AppColors.yellow.withValues(alpha: 0.5), // Warm yellow-orange
     ),
     HomeCommonDataWidget(
-      image: 'assets/images/fries.png',
+      image: AppImages.fries,
       title: 'Fries',
       color: AppColors.yellow.withValues(alpha: 0.5), // Warm yellow-orange
     ),
     HomeCommonDataWidget(
-      image: 'assets/images/momo.png',
+      image: AppImages.momo,
       title: 'Momos',
       color: AppColors.yellow.withValues(alpha: 0.5), // Warm yellow-orange
     ),
 
     HomeCommonDataWidget(
-      image: 'assets/images/drinks.png',
+      image: AppImages.soda,
       title: 'Drinks',
       color: AppColors.yellow.withValues(alpha: 0.5), // Warm yellow-orange
     ),

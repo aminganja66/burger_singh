@@ -1,5 +1,6 @@
 import 'package:burger_singh/app/core/app_colors.dart';
 import 'package:burger_singh/app/core/app_images.dart';
+import 'package:burger_singh/app/modules/home/views/home_bottom_nav_bar_view.dart';
 import 'package:burger_singh/app/modules/home/views/home_category_view.dart';
 import 'package:burger_singh/app/modules/home/views/home_featured_item_view.dart';
 import 'package:burger_singh/app/modules/home/views/home_our_location_view.dart';
@@ -29,9 +30,11 @@ class HomeView extends GetView<HomeController> {
             HomeFeaturedItemView(),
             HomeRecommendedItemView(),
             HomeOurLocationView(),
+            SizedBox(height: 15),
           ],
         ),
       ),
+      bottomNavigationBar: HomeBottomNavBarView(),
     );
   }
 

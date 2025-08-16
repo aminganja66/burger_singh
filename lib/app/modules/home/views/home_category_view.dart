@@ -22,7 +22,11 @@ class HomeCategoryView extends GetView<HomeController> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: List.generate(
               controller.homeCategories.length,
-              (index) => _category(controller.homeCategories[index].color!, controller.homeCategories[index].title),
+              (index) => _category(
+                controller.homeCategories[index].color!,
+                controller.homeCategories[index].title,
+                controller.homeCategories[index].image!,
+              ),
             ),
           ),
         ],
@@ -30,13 +34,16 @@ class HomeCategoryView extends GetView<HomeController> {
     );
   }
 
-  Widget _category(Color color, String title) {
+  Widget _category(Color color, String title, String image) {
     return Column(
       children: [
         Container(
           height: 80,
           width: 80,
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: color),
+          child: Center(
+            child: Padding(padding: const EdgeInsets.all(15), child: Image.asset(image)),
+          ),
         ),
         Text(
           title,
